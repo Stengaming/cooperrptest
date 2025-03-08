@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Pinion';
+    src: url('/src/Pinion-L3MWZ.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hero-title {
+    font-family: 'Pinion', sans-serif;
+}
+.roboto {
+    font-family: "Roboto", sans-serif;
+}
+
+#games-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    overflow-x: hidden;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.game-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-icon {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.game-container:nth-child(3) .game-icon {
+    width: 240px;
+    height: 240px;
+}
+.game-container:nth-child(2) .game-icon,
+.game-container:nth-child(4) .game-icon {
+    width: 200px;
+    height: 200px;
+}
+.game-container:nth-child(1) .game-icon,
+.game-container:nth-child(5) .game-icon {
+    width: 160px;
+    height: 160px;
+}
+
+.game-info {
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    margin-top: 5px;
+}
+
+.game-name {
+    font-weight: bold;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+}
+
+.game-playing {
+    color: green;
+    font-family: "Roboto", sans-serif;
+    font-size: .8rem;
+}
+
+.game-visits {
+    color: gray;
+    font-family: "Roboto", sans-serif;
+    font-size: .8rem;
+}
