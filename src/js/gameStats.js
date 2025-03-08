@@ -1,0 +1,4 @@
+const gameIds = [6431757712, 7016268111, 6789766645, 6614175388, 6528524000, 6463581673, 7096838238, 6885335644, 7166097502, 7047719588, 7072328729, 6743843913];
+const proxyUrl = 'https://api.allorigins.win/get?url=';
+
+async function getTotalActivePlayers(){let t=0,a=0;for(let e of gameIds)try{let s=encodeURIComponent(`https://games.roblox.com/v1/games?universeIds=${e}`),n=await fetch(proxyUrl+s);if(n.ok){let l=await n.json();if(l.contents){let i=JSON.parse(l.contents);if(i.data&&i.data.length>0){let o=i.data[0];o.playing&&(t+=o.playing),o.visits&&(a+=o.visits)}}}}catch(r){console.error("Error:",r)}document.getElementById("player-count").innerHTML=`${t.toLocaleString()} <span class="text-gray-400">Players playing our games</span>`,document.getElementById("visits-count").innerHTML=`${a.toLocaleString()} <span class="text-gray-400">Total play sessions</span>`}getTotalActivePlayers();
