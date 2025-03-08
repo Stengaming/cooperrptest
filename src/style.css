@@ -33,7 +33,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    overflow-x: hidden;
+    overflow: hidden;
     margin-top: 20px;
     width: 100%;
 }
