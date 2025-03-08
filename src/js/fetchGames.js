@@ -4,12 +4,19 @@ const TopGamesIds = [
     7072328729, 6743843913
 ];
 
-const proxyUrl2 = "https://workers-playground-white-credit-775c.bloxyhdd.workers.dev/?url=";
+
+function truncateGameName(gameName) {
+    const maxLength = 19;
+    if (gameName.length > maxLength) {
+        return gameName.substring(0, maxLength) + '...';
+    }
+    return gameName;
+}
 
 async function fetchGameIcon(gameId) {
     try {
         const apiUrl = `https://thumbnails.roblox.com/v1/games/icons?universeIds=${gameId}&size=512x512&format=Png&isCircular=false`;
-        const response = await fetch(proxyUrl2 + encodeURIComponent(apiUrl), {
+        const response = await fetch(proxyUrl + encodeURIComponent(apiUrl), {
             method: "GET",
             headers: {
                 "Origin": "null"
@@ -30,14 +37,13 @@ async function fetchGameIcon(gameId) {
     }
 }
 
-
 async function getGamesData() {
     let gamesData = [];
 
-    for (let gameId of TopGamesIds) {
+    const gameRequests = TopGamesIds.map(async (gameId) => {
         try {
             const apiUrl = `https://games.roblox.com/v1/games?universeIds=${gameId}`;
-            const response = await fetch(proxyUrl2 + encodeURIComponent(apiUrl));
+            const response = await fetch(proxyUrl + encodeURIComponent(apiUrl));
             const result = await response.json();
 
             if (result?.data?.length > 0) {
@@ -56,7 +62,9 @@ async function getGamesData() {
         } catch (error) {
             console.error("Error fetching game data for game ID:", gameId, error);
         }
-    }
+    });
+
+    await Promise.all(gameRequests);
 
     gamesData.sort((a, b) => b.playing - a.playing);
     gamesData = gamesData.slice(0, 5);
@@ -88,7 +96,7 @@ function displayGames(gamesData) {
         const gameInfo = document.createElement('div');
         gameInfo.classList.add('game-info');
         gameInfo.innerHTML = `
-            <p class="game-name">${game.name}</p>
+            <p class="game-name">${truncateGameName(game.name)}</p>
             <p class="game-playing">${game.playing.toLocaleString()} Active Players</p>
             <p class="game-visits">${game.visits} Visits</p>
         `;
