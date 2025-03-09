@@ -11,7 +11,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <link rel="icon" type="image/png" href="/src/Favicon.png"/>
+    <link rel="icon" type="image/png" href="/src/Favicon.png" />
 </head>
 
 <body class="bg-black text-white">
@@ -20,11 +20,20 @@
         <div class="flex items-center gap-2">
             <a href="/"><span class="text-2xl hero-title">Mati Games</span></a>
         </div>
-        <div class="space-x-6">
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div id="nav-links" class="hidden md:flex space-x-6">
             <a href="/" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Home</a>
             <a href="/games/" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Our Games</a>
             <a href="/#about" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">About Us</a>
-            <a href="/#acquisitions" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Acquisitions</a>
+            <a href="/#acquisitions"
+                class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Acquisitions</a>
         </div>
     </nav>
 
@@ -38,6 +47,12 @@
     <script>
         ScrollReveal().reveal('.scroll');
         AOS.init();
+    </script>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
 
