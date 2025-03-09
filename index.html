@@ -7,7 +7,11 @@
     <title>Mati Games</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/src/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link rel="icon" type="image/png" href="/src/Favicon.png"/>
 </head>
 
 <body class="bg-black text-white">
@@ -18,50 +22,113 @@
         </div>
         <div class="space-x-6">
             <a href="/" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Home</a>
-            <a href="#" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Our Games</a>
-            <a href="#" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">About Us</a>
-            <a href="#" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Acquisitions</a>
+            <a href="/games/" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Our Games</a>
+            <a href="/#about" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">About Us</a>
+            <a href="/#acquisitions" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Acquisitions</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="text-center py-20 bg-cover bg-center"
-        style="background-image: linear-gradient(to right, #242124, #003366);">
-        <h1 class="text-5xl hero-title scroll">Mati Games</h1>
-        <p class="text-xl mt-4 roboto scroll">Innovating experiences to the next level at ROBLOX!</p>
+        style="background-color: #FDEE00; background-image: linear-gradient(319deg, #FDEE00 0%, #ff8243 37%, #f94d00 100%);">
+        <h1 class="text-7xl hero-title scroll">Mati Games</h1>
+        <p class="text-xl mt-4 roboto scroll"><span style="font-weight: bold;">Innovating</span> experiences to the next
+            level at ROBLOX!</p>
         <div class="mt-6 flex justify-center gap-4 scroll">
-            <button
-                class="bg-blue-500 px-6 py-2 text-white font-bold rounded transition-transform duration-200 hover:scale-105">
-                View Our Games
-            </button>
-            <button
+
+            <a href="/games/"><button
+                    class="px-6 py-2 text-white font-bold rounded border-2 border-transparent transition-all duration-200 hover:scale-105"
+                    style="background-color: rgb(167, 23, 23);">
+                    View Our Games
+                </button></a>
+
+            <a href="#contact"><button
                 class="bg-white text-black px-6 py-2 font-bold rounded border-2 border-transparent transition-all duration-200 hover:bg-transparent hover:border-white hover:text-white hover:scale-105">
                 Contact us
-            </button>
+            </button></a>
+
         </div>
         <div class="mt-8 text-xl font-bold">
-            <p data-text="Players playing our games" id="player-count">0 <span class="text-gray-400">Players playing our
+            <p data-text="Players playing our games" id="player-count">0 <span class="text-gray-200">Players playing our
                     games</span></p>
-            <p data-text="Total play sessions" id="visits-count">0 <span class="text-gray-400">Total play
+            <p data-text="Total play sessions" id="visits-count">0 <span class="text-gray-200">Total play
                     sessions</span></p>
         </div>
     </section>
 
-    <section class="py-16 text-center scroll">
-        <h2 style="padding-bottom: 2%;" class="text-4xl font-bold">Featured Games</h2>
-        <div id="games-list" class="flex justify-center gap-8 mt-8">
+    <section class="py-16 text-center scroll" data-aos="fade-up">
+        <h1 style="padding-bottom: 2%;" class="text-5xl font-bold scroll">Featured Games</h1>
+        <div id="games-list" class="flex justify-center gap-8 mt-8 scroll">
         </div>
+
+        <a href="/games/"><button data-aos="fade-up" style="margin-top: 2%;"
+            class="bg-black text-white px-12 py-3 font-bold rounded border-2 border-white transition-all duration-200 hover:bg-white hover:text-black hover:scale-110 scroll">
+            Show All
+        </button></a>
     </section>
-    <section class="py-16 text-center scroll">
-        <h2 style="padding-bottom: 2%;" class="text-4xl font-bold">About Us</h2>
-       <p>we do the do</p>
+
+    <section class="py-16 text-center scroll flex flex-col items-center justify-center">
+        <h1 style="padding-bottom: 2%;" class="text-5xl font-bold scroll" id="about">About Us</h1>
+        <p style="width: 50%; font-size: 1.1rem;" class="scroll roboto">Mati Games was founded in 2025 by Brejndead &
+            Crwnds to help Roblox developers bring their game to the next level. Mati Games has reached growth numbers
+            that rank on top in Roblox. Contact us down below for more information.</p>
+    </section>
+
+    <section id="acquisitions" class="py-16 text-center scroll flex flex-col items-center justify-center">
+        <h1 style="padding-bottom: 4%;" class="text-5xl font-bold scroll" id="about">Game Acquisition</h1>
+
+        <h3 data-aos="fade-left" class="text-3xl font-bold scroll">Sell Your Roblox Game!</h3>
+        <p data-aos="fade-right" style="width: 50%; font-size: 1.1rem;" class="scroll roboto paddingupdown">Mati Games offers many ways to
+            sell your game and maximize its potential.</p>
+        <h3 data-aos="fade-left" class="text-3xl font-bold scroll">Full Game Purchase</h3>
+        <p data-aos="fade-right" style="width: 50%; font-size: 1.1rem;" class="scroll roboto paddingupdown">We buy your Roblox game upfront
+            with a competitive offer.</p>
+        <h3 data-aos="fade-left" class="text-3xl font-bold scroll">Expert Growth & Marketing</h3>
+        <p data-aos="fade-right" style="width: 50%; font-size: 1.1rem;" class="scroll roboto paddingupdown">Our team handles development,
+            marketing, and optimization to ensure success.</p>
+        <h3 data-aos="fade-left" class="text-3xl font-bold scroll">Ongoing Earnings</h3>
+        <p data-aos="fade-right" style="width: 50%; font-size: 1.1rem;" class="scroll roboto paddingupdown">Sell a majority % and let us to
+            the hard work and make easy revenue!</p>
+        <h3 data-aos="fade-left" class="text-3xl font-bold scroll">Stress-Free Process</h3>
+        <p data-aos="fade-right" style="width: 50%; font-size: 1.1rem;" class="scroll roboto paddingupdown">We manage everything, so you can
+            focus on your next big project.</p>
+    </section>
+
+    <section id="contact" class="contact-section" data-aos="zoom-out-down">
+        <h1 class="contact-heading">Contact Us!</h1>
+        <div class="profile-container">
+            <div class="profile">
+                <div class="profile-pfp">
+                    <img src="" alt="Discord Profile 1" class="pfp-image" id="pfp-1">
+                    <div class="status-indicator" id="status-1"></div>
+                </div>
+                <p class="username" id="username-1">Loading...</p>
+                <div class="profile-buttons">
+                    <a href="https://www.roblox.com/users/615656680/profile" class="text-button roblox-button" target="_blank">Roblox</a>
+                    <a href="mailto:matejwernisch@email.cz" class="text-button email-button" target="_blank">Email</a>
+                </div>
+            </div>
+    
+            <div class="profile">
+                <div class="profile-pfp">
+                    <img src="" alt="Discord Profile 2" class="pfp-image" id="pfp-2">
+                    <div class="status-indicator" id="status-2"></div>
+                </div>
+                <p class="username" id="username-2">Loading...</p>
+                <div class="profile-buttons">
+                    <a href="https://www.roblox.com/users/47672347/profile" class="text-button roblox-button" target="_blank">Roblox</a>
+                    <a href="mailto:crwndonopera@gmail.com" class="text-button email-button" target="_blank">Email</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script src="/src/js/gameStats.js"></script>
     <script src="/src/js/fetchGames.js"></script>
+    <script src="/src/js/discord.js"></script>
     <script>
-        ScrollReveal({ reset: true });
         ScrollReveal().reveal('.scroll');
+        AOS.init();
     </script>
 </body>
 
