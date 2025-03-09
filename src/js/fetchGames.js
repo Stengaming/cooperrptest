@@ -4,7 +4,6 @@ const TopGamesIds = [
     7072328729, 6743843913
 ];
 
-
 function truncateGameName(gameName) {
     const maxLength = 19;
     if (gameName.length > maxLength) {
@@ -53,6 +52,7 @@ async function getGamesData() {
 
                 gamesData.push({
                     id: gameData.id,
+                    rootPlaceId: gameData.rootPlaceId,
                     name: gameData.name,
                     playing: gameData.playing,
                     visits: gameData.visits.toLocaleString(),
@@ -88,10 +88,17 @@ function displayGames(gamesData) {
         const gameContainer = document.createElement('div');
         gameContainer.classList.add('game-container');
 
+        const gameLink = document.createElement('a');
+        gameLink.href = `https://www.roblox.com/games/${game.rootPlaceId}`;
+        gameLink.target = "_blank";
+        gameLink.rel = "noopener noreferrer";
+
         const gameIcon = document.createElement('img');
         gameIcon.src = game.icon;
         gameIcon.alt = game.name;
         gameIcon.classList.add('game-icon');
+
+        gameLink.appendChild(gameIcon);
 
         const gameInfo = document.createElement('div');
         gameInfo.classList.add('game-info');
@@ -101,7 +108,7 @@ function displayGames(gamesData) {
             <p class="game-visits">${game.visits} Visits</p>
         `;
 
-        gameContainer.appendChild(gameIcon);
+        gameContainer.appendChild(gameLink);
         gameContainer.appendChild(gameInfo);
         gamesList.appendChild(gameContainer);
     });
