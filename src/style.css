@@ -39,7 +39,23 @@ html{
 
 body {
     overflow-x: hidden;
+    user-select: none;
 }
+img {
+    pointer-events: none;
+}
+h1, h2 {
+    user-select: text;
+}
+::-moz-selection {
+    color: black;
+    background: white;
+  }
+  
+  ::selection {
+    color: black;
+    background: white;
+  }
 
 .hero-title {
     font-family: 'Pinion', sans-serif;
