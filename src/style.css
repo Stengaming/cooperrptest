@@ -395,3 +395,26 @@ nav {
         padding: 0.5rem 0;
     }
 }
+
+.discord-invite {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    padding-bottom: 30px;
+}
+
+.discord-button {
+    background-color: #5865F2;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.discord-button:hover {
+    background-color: #4752C4;
+    transform: scale(1.05);
+}
