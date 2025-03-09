@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mati Games</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link rel="icon" type="image/png" href="/src/Favicon.png"/>
+</head>
+
+<body class="bg-black text-white">
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center px-6 py-4 bg-black scroll">
+        <div class="flex items-center gap-2">
+            <a href="/"><span class="text-2xl hero-title">Mati Games</span></a>
+        </div>
+        <div class="space-x-6">
+            <a href="/" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Home</a>
+            <a href="/games/" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Our Games</a>
+            <a href="/#about" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">About Us</a>
+            <a href="/#acquisitions" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Acquisitions</a>
+        </div>
+    </nav>
+
+    <section class="py-16 text-center">
+        <h2 style="padding-bottom: 2%;" class="text-4xl font-bold scroll">Our Games</h2>
+        <div id="games-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8 px-4">
+        </div>
+    </section>
+
+    <script src="/src/js/allGames.js"></script>
+    <script>
+        ScrollReveal().reveal('.scroll');
+        AOS.init();
+    </script>
+</body>
+
+</html>
