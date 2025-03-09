@@ -74,6 +74,7 @@ async function getGamesData() {
 
                 gamesData.push({
                     id: gameData.id,
+                    rootPlaceId: gameData.rootPlaceId,
                     name: gameData.name,
                     playing: gameData.playing,
                     visits: gameData.visits.toLocaleString(),
@@ -100,10 +101,17 @@ function displayGames(gamesData) {
         const gameContainer = document.createElement('div');
         gameContainer.classList.add('game-container', 'bg-transparent', 'p-4', 'rounded-lg', 'shadow-lg', 'hover:shadow-xl', 'transition-shadow', 'duration-300', 'scroll');
 
+        const gameLink = document.createElement('a');
+        gameLink.href = `https://www.roblox.com/games/${game.rootPlaceId}`;
+        gameLink.target = "_blank";
+        gameLink.rel = "noopener noreferrer";
+
         const gameIcon = document.createElement('img');
         gameIcon.src = game.icon;
         gameIcon.alt = game.name;
         gameIcon.classList.add('game-icon2');
+
+        gameLink.appendChild(gameIcon);
 
         const gameInfo = document.createElement('div');
         gameInfo.classList.add('game-info', 'mt-4');
@@ -113,7 +121,7 @@ function displayGames(gamesData) {
             <p class="game-visits text-gray-400">${game.visits} Visits</p>
         `;
 
-        gameContainer.appendChild(gameIcon);
+        gameContainer.appendChild(gameLink);
         gameContainer.appendChild(gameInfo);
         gamesList.appendChild(gameContainer);
     });
