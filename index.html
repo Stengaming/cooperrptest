@@ -11,7 +11,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <link rel="icon" type="image/png" href="/src/Favicon.png"/>
+    <link rel="icon" type="image/png" href="/src/Favicon.png" />
 </head>
 
 <body class="bg-black text-white">
@@ -20,11 +20,20 @@
         <div class="flex items-center gap-2">
             <a href="/"><span class="text-2xl hero-title">Mati Games</span></a>
         </div>
-        <div class="space-x-6">
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div id="nav-links" class="hidden md:flex space-x-6">
             <a href="/" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Home</a>
             <a href="/games/" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Our Games</a>
             <a href="/#about" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">About Us</a>
-            <a href="/#acquisitions" class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Acquisitions</a>
+            <a href="/#acquisitions"
+                class="relative px-4 py-2 rounded transition duration-300 hover:bg-gray-800">Acquisitions</a>
         </div>
     </nav>
 
@@ -43,9 +52,9 @@
                 </button></a>
 
             <a href="#contact"><button
-                class="bg-white text-black px-6 py-2 font-bold rounded border-2 border-transparent transition-all duration-200 hover:bg-transparent hover:border-white hover:text-white hover:scale-105">
-                Contact us
-            </button></a>
+                    class="bg-white text-black px-6 py-2 font-bold rounded border-2 border-transparent transition-all duration-200 hover:bg-transparent hover:border-white hover:text-white hover:scale-105">
+                    Contact us
+                </button></a>
 
         </div>
         <div class="mt-8 text-xl font-bold">
@@ -62,9 +71,9 @@
         </div>
 
         <a href="/games/"><button data-aos="fade-up" style="margin-top: 2%;"
-            class="bg-black text-white px-12 py-3 font-bold rounded border-2 border-white transition-all duration-200 hover:bg-white hover:text-black hover:scale-110 scroll">
-            Show All
-        </button></a>
+                class="bg-black text-white px-12 py-3 font-bold rounded border-2 border-white transition-all duration-200 hover:bg-white hover:text-black hover:scale-110 scroll">
+                Show All
+            </button></a>
     </section>
 
     <section class="py-16 text-center scroll flex flex-col items-center justify-center">
@@ -78,19 +87,24 @@
         <h1 style="padding-bottom: 4%;" class="text-5xl font-bold scroll" id="about">Game Acquisition</h1>
 
         <h3 data-aos="fade-left" class="text-3xl font-bold scroll">Sell Your Roblox Game!</h3>
-        <p data-aos="fade-right" style="width: 50%; font-size: 1.1rem;" class="scroll roboto paddingupdown">Mati Games offers many ways to
+        <p data-aos="fade-right" style="width: 50%; font-size: 1.1rem;" class="scroll roboto paddingupdown">Mati Games
+            offers many ways to
             sell your game and maximize its potential.</p>
         <h3 data-aos="fade-left" class="text-3xl font-bold scroll">Full Game Purchase</h3>
-        <p data-aos="fade-right" style="width: 50%; font-size: 1.1rem;" class="scroll roboto paddingupdown">We buy your Roblox game upfront
+        <p data-aos="fade-right" style="width: 50%; font-size: 1.1rem;" class="scroll roboto paddingupdown">We buy your
+            Roblox game upfront
             with a competitive offer.</p>
         <h3 data-aos="fade-left" class="text-3xl font-bold scroll">Expert Growth & Marketing</h3>
-        <p data-aos="fade-right" style="width: 50%; font-size: 1.1rem;" class="scroll roboto paddingupdown">Our team handles development,
+        <p data-aos="fade-right" style="width: 50%; font-size: 1.1rem;" class="scroll roboto paddingupdown">Our team
+            handles development,
             marketing, and optimization to ensure success.</p>
         <h3 data-aos="fade-left" class="text-3xl font-bold scroll">Ongoing Earnings</h3>
-        <p data-aos="fade-right" style="width: 50%; font-size: 1.1rem;" class="scroll roboto paddingupdown">Sell a majority % and let us to
+        <p data-aos="fade-right" style="width: 50%; font-size: 1.1rem;" class="scroll roboto paddingupdown">Sell a
+            majority % and let us to
             the hard work and make easy revenue!</p>
         <h3 data-aos="fade-left" class="text-3xl font-bold scroll">Stress-Free Process</h3>
-        <p data-aos="fade-right" style="width: 50%; font-size: 1.1rem;" class="scroll roboto paddingupdown">We manage everything, so you can
+        <p data-aos="fade-right" style="width: 50%; font-size: 1.1rem;" class="scroll roboto paddingupdown">We manage
+            everything, so you can
             focus on your next big project.</p>
     </section>
 
@@ -104,11 +118,12 @@
                 </div>
                 <p class="username" id="username-1">Loading...</p>
                 <div class="profile-buttons">
-                    <a href="https://www.roblox.com/users/615656680/profile" class="text-button roblox-button" target="_blank">Roblox</a>
+                    <a href="https://www.roblox.com/users/615656680/profile" class="text-button roblox-button"
+                        target="_blank">Roblox</a>
                     <a href="mailto:matejwernisch@email.cz" class="text-button email-button" target="_blank">Email</a>
                 </div>
             </div>
-    
+
             <div class="profile">
                 <div class="profile-pfp">
                     <img src="" alt="Discord Profile 2" class="pfp-image" id="pfp-2">
@@ -116,7 +131,8 @@
                 </div>
                 <p class="username" id="username-2">Loading...</p>
                 <div class="profile-buttons">
-                    <a href="https://www.roblox.com/users/47672347/profile" class="text-button roblox-button" target="_blank">Roblox</a>
+                    <a href="https://www.roblox.com/users/47672347/profile" class="text-button roblox-button"
+                        target="_blank">Roblox</a>
                     <a href="mailto:crwndonopera@gmail.com" class="text-button email-button" target="_blank">Email</a>
                 </div>
             </div>
@@ -129,6 +145,12 @@
     <script>
         ScrollReveal().reveal('.scroll');
         AOS.init();
+    </script>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
 
