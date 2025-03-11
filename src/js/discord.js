@@ -13,7 +13,7 @@ discordIds.forEach((id, index) => {
 
             usernameElement.textContent = user.discord_user.username;
 
-            if (user.discord_status === "online" || user.discord_status === "dnd") {
+            if (user.discord_status === "online" || user.discord_status === "dnd" || user.discord_status === "idle") {
                 statusElement.style.backgroundColor = "#00ff00";
             } else {
                 statusElement.style.backgroundColor = "#808080";
