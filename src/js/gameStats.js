@@ -1,7 +1,7 @@
 const gameIds = [
     6431757712, 7016268111, 6789766645, 6614175388, 6528524000,
     6463581673, 7096838238, 7166097502, 7047719588,
-    7072328729, 6743843913, 7334543566
+    7072328729, 6743843913, 7334543566, 6829990681
 ];
 const proxyUrl = "https://workers-playground-white-credit-775c.bloxyhdd.workers.dev/?url=";
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
